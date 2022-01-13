@@ -1,0 +1,17 @@
+스프링 -> IOC -> 제어의 역전
+싱글톤 패턴 + 레퍼런스 변수를 스프링이 관리하겠다
+사용자가 객체를 관리하기 힘드니 스프링이 관리를 함
+
+- 컴포지션 스캔 : 필요한 것들을 메모리에 로드 (IOC, 싱글톤으로 관리)
+	패키지 => 스캔 => 스프링컨테이너 (모든 객체에 대한 변수들을 관리)
+	스캔의 기준이 com.cos.blog 이하인데
+	com.cos.test로 만들면 스캔을 안해서 진행할수가 없음
+	
+	
+-- 유저이름@아이피주소
+create user 'cos'@'%' identified by 'mysql';
+-- ON DB이름.테이블명
+-- TO 유저이름@아이피주소
+GRANT ALL PRIVILEGES ON *.* TO 'cos'@'%';
+CREATE DATABASE blog CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+use blog;

@@ -16,4 +16,11 @@ GRANT ALL PRIVILEGES ON *.* TO 'cos'@'%';
 CREATE DATABASE blog CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
 use blog;
 
-지식이 업데이트 됬어요 RIfmfm
+지식이 업데이트 됬어요
+
+HTTP 통신 : 약속
+통신방법 4가지! 요청의 방법
+GET : 데이터를 줘! SELECT
+POST : 데이터를 추가해줘 INSERT
+PUT : 데이터를 수정해줘 UPDATE
+DELETE : 데이터를 삭제해줘 DELETE

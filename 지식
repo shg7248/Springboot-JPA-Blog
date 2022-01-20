@@ -16,4 +16,4 @@ GRANT ALL PRIVILEGES ON *.* TO 'cos'@'%';
 CREATE DATABASE blog CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
 use blog;
 
-지식이 업데이트 됬어요
+지식이 업데이트 됬어요 RIfmfm

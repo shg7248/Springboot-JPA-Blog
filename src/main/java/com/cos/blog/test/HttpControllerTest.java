@@ -24,8 +24,8 @@ public class HttpControllerTest {
 	// application/json 데이터를 보내면 스프링에서 자동으로 파싱해 줌 (MessageConverter)
 	// http://localhost:8080/http/post (insert)
 	@PostMapping("/http/post")
-	public String postTest(@RequestBody Member m) {
-		return "post 요청함 : " + m.getId() + " / " + m.getUsername();
+	public String postTest(@RequestBody String text) {
+		return text;
 	}
 	
 	// http://localhost:8080/http/put (update)

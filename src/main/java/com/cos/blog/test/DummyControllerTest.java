@@ -53,7 +53,7 @@ public class DummyControllerTest {
 	
 	@Transactional // 함수 종료시에 자동 commit 이 됨.
 	@PutMapping("dummy/user/{id}")
-	public User updateUser(@PathVariable int id, @RequestBody User requestUser) {
+	public void updateUser(@PathVariable int id, @RequestBody User requestUser) {
 		// json 데이터를 요청 => Java Object(MessageConverter의 Jackson 라이브러리로 변환해서 받아줘요.)
 		
 		// 영속화된 오브젝트
@@ -68,7 +68,6 @@ public class DummyControllerTest {
 //		userRepository.save(user);
 		
 		// 더티 체킹
-		return user;
 	}
 	
 	// 한페이지당 2건의 데이터를 리턴받아 볼 예정

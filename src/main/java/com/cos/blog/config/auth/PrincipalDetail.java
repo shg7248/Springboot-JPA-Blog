@@ -3,6 +3,8 @@ package com.cos.blog.config.auth;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -15,6 +17,10 @@ import lombok.Getter;
 @Getter
 public class PrincipalDetail implements UserDetails{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private User user; // 콤포지션
 	
 	public PrincipalDetail(User user) {
@@ -66,11 +72,18 @@ public class PrincipalDetail implements UserDetails{
 		// TODO Auto-generated method stub
 		Collection<GrantedAuthority> collectors = new ArrayList<>();
 		collectors.add(new GrantedAuthority() {
+			/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
 			@Override
 			public String getAuthority() {
 				return "ROLE_" + user.getRole();
 			}
 		});
+
+		
 		return collectors;
 	}
 }
